@@ -1,0 +1,347 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SyncDos
+</name>
+</assembly>
+<members>
+<member name="T:SyncDos.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:SyncDos.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:SyncDos.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:SyncDos.Module1.DirReplica.#ctor(System.String,System.String,System.Boolean,System.String)">
+ <summary>
+ Cria instrução para replicação de diretórios.
+ </summary>
+ <param name="DirOrigem">Diretório de origem que permanecerá inalterado.</param>
+ <param name="DirDestino">Diretório de destino, que será alterado.</param>
+ <param name="IncluirSubDir">Incluir sub-diretórios?</param>
+ <param name="ApagarQuandoEncontrar">Apagar quais arquivos quando encontrar (thumbmail por exemplo)?</param>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.DirReplica.DirOrigem">
+ <summary>
+ Diretório de origem.
+ </summary>
+ <value>Diretório de origem.</value>
+ <returns>Diretório de origem.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.DirReplica.DirDestino">
+ <summary>
+ Diretório de destino.
+ </summary>
+ <value>Diretório de destino.</value>
+ <returns>Diretório de destino.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.DirReplica.IncluiSub">
+ <summary>
+ Inclui sub-diretório.
+ </summary>
+ <value>Inclui sub-diretório.</value>
+ <returns>Inclui sub-diretório.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.DirReplica.QtdArqs">
+ <summary>
+ Quantidade de arquivos.
+ </summary>
+ <value>Quantidade de arquivos.</value>
+ <returns>Quantidade de arquivos.</returns>
+ <remarks></remarks>
+</member>
+<member name="E:SyncDos.Module1.DirReplica.NotificaStatus">
+ <summary>
+ Executa rotina de notificação de status externa (carregada por delegate).
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.DirReplica.Status">
+ <summary>
+ Status do sincronismo.
+ </summary>
+ <value>Status do sincronismo.</value>
+ <returns>Status do sincronismo.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.DirReplica.Inicio">
+ <summary>
+ Início da replicação.
+ </summary>
+ <value>Início da replicação.</value>
+ <returns>Início da replicação.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.DirReplica.Termino">
+ <summary>
+ Término da replicação.
+ </summary>
+ <value>Término da replicação.</value>
+ <returns>Término da replicação.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.DirReplica.LogDetalhado">
+ <summary>
+ Registro de log detalhado.
+ </summary>
+ <value>Registro de log detalhado.</value>
+ <returns>Registro de log detalhado.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.DirReplica.Log">
+ <summary>
+ Registro de log.
+ </summary>
+ <value>Registro de log.</value>
+ <returns>Registro de log.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:SyncDos.Module1.DirReplica.Trata(System.String,System.String,System.String,System.String)">
+ <summary>
+ Execução da replicação de arquivo.
+ </summary>
+ <param name="Arquivo">Arquivo a ser replicado.</param>
+ <param name="DirOrigem">Diretório de origem.</param>
+ <param name="DirDestino">Diretório de destino.</param>
+ <param name="ArquivoDest">Arquivo de destino.</param>
+ <remarks></remarks>
+</member>
+<member name="M:SyncDos.Module1.DirReplica.RegLog(System.String)">
+ <summary>
+ Registro de log de sincronização.
+ </summary>
+ <param name="Texto">Mensagem que será registrada.</param>
+ <remarks></remarks>
+</member>
+<member name="M:SyncDos.Module1.DirReplica.Apaga(System.String,System.String)">
+ <summary>
+ Apaga arquivo.
+ </summary>
+ <param name="Arquivo">Arquivo que será apagado.</param>
+ <param name="Diretorio">Diretório onde se encontra este arquivo.</param>
+ <remarks></remarks>
+</member>
+<member name="M:SyncDos.Module1.DirReplica.CriaDir(System.String)">
+ <summary>
+ Criação de diretório.
+ </summary>
+ <param name="Diretorio">Diretório que será criado.</param>
+ <remarks></remarks>
+</member>
+<member name="M:SyncDos.Module1.DirReplica.Notifica(System.String,System.Boolean)">
+ <summary>
+ Registro de notificação de status.
+ </summary>
+ <param name="Texto">Texto a notificar.</param>
+ <param name="Forcar">Grava mensagem e manda para função de notificação agora.</param>
+ <remarks></remarks>
+</member>
+<member name="M:SyncDos.Module1.DirReplica.Executa">
+ <summary>
+ Execução do processo de replicação.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SyncDos.Module1.DirReplica.Bloqueado(System.String)">
+ <summary>
+ Verifica se caminho está bloqueado.
+ </summary>
+ <param name="Caminho">Caminho.</param>
+ <returns>True caso esteja na lista de caminhos bloqueados ou false caso contrário.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:SyncDos.Module1.DirReplica.Garante(System.String,System.String,System.String,System.String)">
+ <summary>
+ Garante gravação adequada do arquivo.
+ </summary>
+ <param name="Arquivo">Arquivo.</param>
+ <param name="DirOrigem">Diretório de origem.</param>
+ <param name="DirDestino">Diretório de destino.</param>
+ <param name="ArquivoDest">Arquivo de destino.</param>
+ <remarks></remarks>
+</member>
+<member name="M:SyncDos.Module1.DirReplica.Executa(System.String,System.String,System.String)">
+ <summary>
+ Executa replicação de diretório de origem para réplica.
+ </summary>
+ <param name="Origem">Diretório de origem.</param>
+ <param name="Destino">Diretório de réplica.</param>
+ <remarks></remarks>
+</member>
+<member name="M:SyncDos.Module1.DirReplica.ApagaDir(System.String)">
+ <summary>
+ Apagar diretório.
+ </summary>
+ <param name="Diretorio">Diretório a ser eliminado.</param>
+ <remarks></remarks>
+</member>
+<member name="M:SyncDos.Module1.LogonSession.ToString">
+ <summary>
+ Converte as informações de login da seção para uma string.
+ </summary>
+ <returns>Retorna a string contendo as informações.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.LogonSession.Id">
+ <summary>
+ Identificação para armazenamento de logon do tipo 'GERAL' ou algum específico para múltiplos logons.
+ </summary>
+ <value>Especificação do tipo de logon.</value>
+ <returns>Especificação do tipo de logon.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.LogonSession.Usuario">
+ <summary>
+ Usuário que efetuou logon.
+ </summary>
+ <value>Login do usuário que efetuou logon.</value>
+ <returns>Login do usuário que efetuou logon.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.LogonSession.Momento">
+ <summary>
+ Momento de logon.
+ </summary>
+ <value>Momento (data e hora) de logon.</value>
+ <returns>Momento (data e hora) de logon.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.LogonSession.Grupo">
+ <summary>
+ Grupo do usuário que efetuou logon.
+ </summary>
+ <value>Nome do grupo do usuário que efetuou logon.</value>
+ <returns>Nome do grupo do usuário que efetuou logon.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.LogonSession.Site">
+ <summary>
+ Nome do site.
+ </summary>
+ <value></value>
+ <returns>Nome do site.</returns>
+ <remarks>Nome do site.</remarks>
+</member>
+<member name="P:SyncDos.Module1.LogonSession.Senha">
+ <summary>
+ Senha de acesso.
+ </summary>
+ <value>Senha de acesso.</value>
+ <returns>Senha de acesso.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.LogonSession.ExtendedProps(System.String)">
+ <summary>
+ Outras propriedades a serem armazenadas pelo Logon.
+ </summary>
+ <param name="Propriedade">Nome da propriedade.</param>
+ <value>Valor da propriedade.</value>
+ <returns>Valor da propriedade armazenada.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.LogonSession.Attributes(System.String)">
+ <summary>
+ Acesso aos atributos e propriedades expandidas.
+ </summary>
+ <param name="Nome">Nome da propriedade tratada.</param>
+ <value>Valor da propriedade tratada.</value>
+ <returns>Valor da propriedade solicitada.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:SyncDos.Module1.LogonSession.#ctor(System.Web.UI.Page,System.String,System.String)">
+ <summary>
+ Criação de login para registro de acesso de usuário.
+ </summary>
+ <param name="Pagina">Página na qual é efetuado o login.</param>
+ <param name="Usuario">Usuário que efetua acesso.</param>
+ <param name="Senha">Senha do usuário.</param>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.Email.Valida(System.String)">
+ <summary>
+ Verifica a existência de caracteres inválidos para o formato de email padrão.
+ </summary>
+ <param name="Email">Email a ser verificado.</param>
+ <value>Endereço de email.</value>
+ <returns>True se email é válido ou false caso contrário.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.Email.Valida">
+ <summary>
+ Verifica email carregado anteriormente.
+ </summary>
+ <value>True se email é válido ou false caso contrário.</value>
+ <returns>True se email é válido ou false caso contrário.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:SyncDos.Module1.Email.#ctor(System.String)">
+ <summary>
+ Decompõe email em elementos.
+ </summary>
+ <param name="Email">Endereço de email.</param>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.Email.Dominio">
+ <summary>
+ Domínio do email.
+ </summary>
+ <value>Domínio do email (depois do arroba).</value>
+ <returns>Domínio do email.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.Email.Completo">
+ <summary>
+ Email completo já formatado.
+ </summary>
+ <value>Email completo já formatado.</value>
+ <returns>Email completo já formatado.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.Email.SoEndereco">
+ <summary>
+ Só o endereço do email (antes do arroba).
+ </summary>
+ <value>Só o endereço do email.</value>
+ <returns>Só o endereço do email.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.Email.Descricao">
+ <summary>
+ Descrição do email (trecho entre apóstrofos antes do email).
+ </summary>
+ <value>Descrição do email (trecho entre apóstrofos antes do email).</value>
+ <returns>Descrição do email (trecho entre apóstrofos antes do email).</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.Email.PrimeiroNome">
+ <summary>
+ Primeiro nome na descrição do email.
+ </summary>
+ <value>Primeiro nome na descrição do email.</value>
+ <returns>Primeiro nome na descrição do email.</returns>
+ <remarks></remarks>
+</member>
+<member name="P:SyncDos.Module1.Email.UltimoNome">
+ <summary>
+ Último nome na descrição de email.
+ </summary>
+ <value>Último nome na descrição de email.</value>
+ <returns>Último nome na descrição de email.</returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>
